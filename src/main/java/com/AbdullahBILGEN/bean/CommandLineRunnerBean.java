@@ -10,7 +10,7 @@ public class CommandLineRunnerBean {
     public CommandLineRunner commendLineRunnerMethod(){
         return args->{
             log.info("Data set oluşturuldu");
-            System.out.println("Data set oluşturuldu");
+            System.out.println("Data oluşturuldu");
 
          };// end return
         }//end CommendLineRunnerBean Method
