@@ -7,37 +7,29 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
 
-//LOMBOK
+// LOMBOK
 @Data
 
-//JSON
+// JSON: Eğer bu fieldlarda null varsa backentte girmesin
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResult {
 
-            // PIRASA VALİ M E S C
-            private String path;
-            private Map<String, String> validationErrors;
-            private String message;
-            private  String erorr;
-            private int status ;
-            private Date systemDate;  /*Created Date
+    // Pırasa Vali MESC
+    private String path;
+    private Map<String,String> validationErrors;
+    private String message;
+    private String error;
+    private int status;
+    private Date systemDate;
 
-    // Parametresiz Consctor
-
-       public ApiResult() {
+    // Parametresiz Constructor
+    public ApiResult() {
     }
 
-     // Parametreli Consctor
-     public ApiResult(String path, String message, int status) {
+    // Parametreli Constructor
+    public ApiResult(String path, String message, int status) {
         this.path = path;
         this.message = message;
         this.status = status;
     }
-
-
 }
-
-
-
-
-
